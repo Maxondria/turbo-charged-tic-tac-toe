@@ -1,0 +1,13 @@
+<% 3.times do |row| %>
+  <div class="flex w-64 h-24">
+    <% 3.times do |col| %>
+      <span class="grow border-solid border-2 border-black flex justify-center items-center">
+        <% if  game[row,col].nil? %>
+          <%= button_to "-", game_moves_path(game), params: { row: row, col: col }, method: :post %>
+        <% else %>
+          <%= game[row,col]  %>
+        <% end %>
+      </span>
+    <% end %>
+  </div>
+<% end %>

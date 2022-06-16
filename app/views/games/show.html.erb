@@ -1,0 +1,6 @@
+<h1>Games</h1>
+<br>
+<%= turbo_stream_from @game  %>
+<div id="<%= dom_id(@game)  %>" class="p-6">
+  <%= render @game, game: @game  %>
+</div>

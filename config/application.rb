@@ -33,5 +33,8 @@ module TicTacToe
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Enable UUIDs in the database.
+    config.generators { |g| g.orm :active_record, primary_key_type: :uuid }
   end
 end
